@@ -15,7 +15,7 @@ document.querySelector('.check').addEventListener('click', function () {
   if (!guess) {
     message('No Number!');
 
-    // when player wins
+    // when player guesses correct number
   } else if (guess === secretNum) {
     message('Correct Number!');
     document.querySelector('body').style.backgroundColor = '#60b347';
@@ -27,7 +27,7 @@ document.querySelector('.check').addEventListener('click', function () {
     if (score > highScore) highScore = score;
     document.querySelector('.highscore').textContent = highScore;
 
-    // when the guess is greater than secret number
+    // when the guess is not the same as the secret number
   } else if (guess !== secretNum) {
     if (score > 1) {
       message(guess > secretNum ? 'Too High' : 'Too Low');
